@@ -1,20 +1,3 @@
-EE_BIN = hola.elf
-EE_OBJS = main.o
-
-GSKIT ?= $(PS2DEV)/gsKit
-
-EE_INCS += -I$(GSKIT)/include
-EE_LDFLAGS += -L$(GSKIT)/lib
-EE_LIBS = -lgskit -ldmakit -lc -lkernel
-
-all: $(EE_BIN)
-
-clean:
-	rm -f $(EE_BIN) $(EE_OBJS)
-
-include $(PS2SDK)/samples/Makefile.pref
-include $(PS2SDK)/samples/Makefile.eeglobal
-
 // Prueba minima para PS2: pinta la pantalla y un cuadrado que cambia de color.
 // Si ves esto en PCSX2, tu cadena de herramientas funciona.
 
